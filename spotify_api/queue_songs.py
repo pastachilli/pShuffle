@@ -56,8 +56,8 @@ weights = {
 # Carry On - Fun: 7gpy7sfWPNuOKmUNs3XQYE
 # Don't You Worry 'Bout a Thing: Stevie Wonder: 1QvWxgZvTU0w8rlPRE5Zrv
 
-initial_song_id = '4sWZwY8RQfK6Fc2pYC7tN1'  # Replace with your actual initial song ID
-num_songs_to_queue = 100  # Number of songs you want in the queue
+initial_song_id = input("Please enter the starting song ID: ")  # Replace with your actual initial song ID
+num_songs_to_queue = input("How many songs do you want me to queue?: ")  # Number of songs you want in the queue
 queued_songs = sf.generate_song_queue(initial_song_id, songs, weights, attribute_keys, num_songs_to_queue)
 
 # Read the configuration file
@@ -82,3 +82,4 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
 for song in queued_songs:
     track_uri = song['uri']  # Assuming 'uri' is a part of your song dictionary
     sp.add_to_queue(track_uri, device_id=None)  # If you know the device ID, you can specify it here
+
