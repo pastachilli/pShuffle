@@ -1,0 +1,12 @@
+# Ignore all of the API keys:
+/config/*
+/output/*
+/xml_files/*
+/spotify_api/.cache
+/.idea/*
+reference_material.txt
+/venv/
+/shuffle/__pycache__/*
+/shuffle/.cache
+/graph_formation/__pycache__/*
+/graph_formation/lib/*
